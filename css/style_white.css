@@ -1,0 +1,481 @@
+/* =============================================
+   FULLFLOW — WHITE / LIGHT THEME
+   ============================================= */
+
+@import url('style.css');
+
+/* ── YOUR CONTROL CENTER ── 
+   Change these values to update your site colors instantly */
+:root {
+    --primary: #3472f8;
+    --accent: #fa6e43;
+    --bg-color: #f8f7f5;
+    --surface-color: #ffffff;
+    --surface-light: rgba(0, 0, 0, 0.04);
+    --border-color: rgba(0, 0, 0, 0.1);
+
+    --text-primary: #000000;
+    /* <── CARD TITLES COLOR */
+    --text-secondary: #1b1b1b;
+    /* <── CARD DESCRIPTIONS COLOR */
+    --text-danger: #fa6e43;
+}
+
+/* ── Global Setup ── */
+body {
+    background-color: transparent !important;
+    color: var(--text-primary);
+}
+
+main,
+section,
+.section,
+.hero {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* ── Navbar ── */
+.navbar {
+    background: rgba(226, 226, 226, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    border-radius: 100px;
+    padding: 0.75rem 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo-img {
+    height: 22px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ── Shader-Exposed Headers (Stay White) ── */
+.hero,
+.vision,
+.model,
+.footer,
+.section-title,
+.section-desc,
+.hero-subtitle {
+    color: #ffffff !important;
+}
+
+.hero .btn-outline {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ── CARDS (Now controlled by variables) ── */
+.bento-card,
+.glass-card,
+.pricing-card,
+.methodology-card {
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+}
+
+.bento-card h3,
+.glass-card h3,
+.pricing-card h4,
+.methodology-card h4,
+.glass-card h4,
+.glass-card h5 {
+    color: var(--text-primary) !important;
+}
+
+.pricing-card h4.tier {
+    color: var(--accent) !important;
+}
+
+.bento-card:hover,
+.glass-card:hover,
+.pricing-card:hover,
+.methodology-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+}
+
+/* ── Card Descriptions (Now controlled by variables) ── */
+.glass-card p,
+.bento-card p,
+.pricing-card .tier-desc,
+.pricing-card .price-per-unit,
+.methodology-card p,
+.pricing-card li,
+.glass-card li {
+    color: var(--text-secondary) !important;
+    /* <── USES VARIABLE */
+}
+
+/* ── Advantage Boxes (Comparison Table) ── */
+.advantage-box h5 {
+    color: var(--text-primary) !important;
+}
+
+.advantage-box p {
+    color: var(--text-secondary) !important;
+}
+
+.advantage-box.highlight h5 {
+    color: var(--accent) !important;
+    /* Keep FullFlow orange */
+}
+
+/* ── Process Flow (Creative Growth Engine) ── */
+.step-circle {
+    background: #ffffff !important;
+    color: var(--accent) !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.process-flow {
+    align-items: flex-start !important;
+    /* Align to the top row (circles) */
+    padding-top: 2rem;
+}
+
+.step-connector {
+    background: var(--accent) !important;
+    /* The corect orange */
+    height: 2px !important;
+    opacity: 0.6;
+    margin-top: 30px;
+    /* Aligns with the center of the 60px circle */
+}
+
+/* ── Footer ── */
+.footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer p, .footer-bottom p {
+    color: #ffffff !important;
+    opacity: 0.7;
+}
+
+/* ── Interactive ── */
+.client-tab,
+.btn,
+.plus-link {
+    cursor: pointer;
+}
+
+.client-tab {
+    color: #ffffff !important;
+}
+
+.section-title {
+    margin-bottom: 3rem !important;
+}
+
+.btn {
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ── Proven Results Bento Gallery (Strict 9:16 Vertical) ── */
+.bento-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #f0f0f0;
+    cursor: pointer;
+    aspect-ratio: 9 / 16;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bento-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+}
+
+.bento-item img, 
+.bento-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.bento-item:hover img,
+.bento-item:hover video {
+    transform: scale(1.04);
+}
+
+.bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bento-item:hover .bento-overlay {
+    opacity: 1;
+}
+
+.bento-badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 12px rgba(250, 110, 67, 0.3);
+}
+
+.bento-title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+/* Grid Spans */
+.span-2-row { grid-row: span 2; }
+.span-2-col { grid-column: span 2; }
+.span-3-row { grid-row: span 3; }
+
+/* Lightbox (Visualiseur) */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px rgba(0,0,0,0.5);
+    aspect-ratio: 9 / 16;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: white;
+    color: black;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: rotate(90deg);
+    background: var(--accent);
+    color: white;
+}
+
+/* Ensure hidden cards don't break the layout */
+.bento-item.hidden {
+    display: none !important;
+}
+
+/* ── Mobile Responsive Overrides ── */
+@media (max-width: 1024px) {
+    .bento-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.05);
+        gap: 1.5rem;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+
+    .nav-links a {
+        color: #000000 !important;
+        font-size: 1.1rem !important;
+        font-weight: 700 !important;
+        width: 100%;
+    }
+
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    .nav-actions .btn {
+        display: none !important;
+    }
+
+    .hero-title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem) !important;
+    }
+}
+
+@media (max-width: 850px) {
+    .bento-gallery {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0 !important;
+    }
+
+    .container {
+        padding: 0 1.5rem !important;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .col-span-2 {
+        grid-column: span 1 !important;
+    }
+
+    /* Target specific grids with inline styles */
+    div[style*="display: grid; grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .advantage-box {
+        grid-template-columns: 1fr !important;
+        padding: 2rem !important;
+        gap: 3rem !important;
+    }
+
+    .process-flow {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+        padding-top: 1rem !important;
+    }
+
+    .step-connector {
+        width: 2px !important;
+        height: 30px !important;
+        margin: 0 !important;
+        transform: scaleY(1) !important;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+
+    .pricing-card {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .methodology-card {
+        padding: 2rem 1rem !important;
+    }
+}
