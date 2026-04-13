@@ -121,7 +121,7 @@
             style="padding: 10rem 0; position: relative; border-top: 1px solid rgba(255, 255, 255, 0.1); border-bottom: 1px solid rgba(255,255,255,0.1); background: rgba(255, 255, 255, 0.1) !important; backdrop-filter: blur(80px); -webkit-backdrop-filter: blur(80px);">
             <div class="container text-center" style="max-width: 1200px;">
                 <h2 class="section-title fade-up scroll-reveal-text" id="reveal-vision-title"
-                    style="font-size: 5rem; line-height: 1.05; margin-bottom: 2.5rem; font-weight: 800;">
+                    style="font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1.05; margin-bottom: 2.5rem; font-weight: 800;">
                     <span data-lang="en">Transform products into high-performing content machines</span>
                     <span data-lang="fr">Transformer les produits en machines à contenu performantes</span>
                 </h2>
@@ -190,7 +190,7 @@
                 </div>
 
                 <div
-                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 5rem; width: 100%;">
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 2rem; margin-bottom: 5rem; width: 100%;">
                     <!-- Real Product -->
                     <div class="glass-card text-center"
                         style="padding: 4rem 1.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -251,7 +251,7 @@
 
                 <!-- The Advantage Comparison -->
                 <div class="glass-card fade-up"
-                    style="padding: 4.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;">
+                    style="padding: clamp(2rem, 5vw, 4.5rem); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr)); gap: clamp(2rem, 5vw, 6rem); align-items: center;">
                     <div style="text-align: left;">
                         <h3 style="font-size: 2.25rem; font-weight: 800; margin-bottom: 1.5rem;" data-lang="en">The
                             Fullframe Advantage</h3>
@@ -431,7 +431,7 @@
                 </div>
 
                 <div class="pricing-grid"
-                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: stretch;">
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 2rem; align-items: stretch;">
                     <!-- Starter -->
                     <div class="pricing-card fade-up">
                         <div style="padding: 0.8rem 0.2rem;">
